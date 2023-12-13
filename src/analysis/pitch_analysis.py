@@ -1,6 +1,6 @@
 import pandas as pd
 
-# test 2
+
 class PitchAnalysis:
     def __init__(self, file_path):
         self.df = pd.read_excel(file_path)  # Read data from Excel file
@@ -15,7 +15,8 @@ class PitchAnalysis:
         # For each team in the league, calculate average speed for the pitch given
         for name in self.team_list:
             pitch_list.append(
-                self.df[(self.df['PitcherTeam'] == name) & (self.df['TaggedPitchType'] == pitch_type)]['RelSpeed'].mean())
+                self.df[(self.df['PitcherTeam'] == name) & (self.df['TaggedPitchType'] == pitch_type)][
+                    'RelSpeed'].mean())
 
         team_speed_dict = dict(sorted(zip(self.team_list, pitch_list), key=lambda x: x[1], reverse=True))
         return team_speed_dict
