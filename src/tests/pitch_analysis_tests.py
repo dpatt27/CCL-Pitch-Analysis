@@ -1,11 +1,10 @@
 import unittest
 from src.analysis.pitch_analysis import *
 
-
 class TestPitchAnalysis(unittest.TestCase):
     def setUp(self):
         # Load in Test Data
-        self.analysis = PitchAnalysis('../../Test Data.xlsx')
+        self.analysis = PitchAnalysis('/Users/Test Data.xlsx')
 
     def test_group_by_teams(self):
 

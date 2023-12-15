@@ -18,7 +18,7 @@ def display_top_pitches(attribute1, attribute2, pitch_type, analysis):
 
 
 if __name__ == "__main__":
-    FILE_PATH = '../../StersCSV.xlsx'
+    FILE_PATH = '/Users/StersCSV.xlsx'
     analysis = PitchAnalysis(FILE_PATH)
 
     # User input for the desired pitch type
